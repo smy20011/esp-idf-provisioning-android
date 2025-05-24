@@ -20,7 +20,6 @@ android {
         versionCode 24
         versionName "2.2.3 - ${getGitHash()}"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles "consumer-proguard-rules.pro"
     }
 
     buildTypes {
@@ -32,7 +31,7 @@ android {
             resValue "string", "wifi_base_url", "192.168.4.1:80"
             resValue "string", "wifi_device_name_prefix", "PROV_"
             resValue "string", "ble_device_name_prefix", "PROV_"
-            buildConfigField "boolean", "isQrCodeSupported", "true"
+            buildConfigField "boolean", "isQrCodeSupported", "false"
             buildConfigField "boolean", "isSettingsAllowed", "true"
             buildConfigField "boolean", "isFilteringByPrefixAllowed", "true"
         }
@@ -42,8 +41,8 @@ android {
             resValue "string", "proof_of_possesion", "abcd1234"
             resValue "string", "wifi_base_url", "192.168.4.1:80"
             resValue "string", "wifi_device_name_prefix", "PROV_"
-            resValue "string", "ble_device_name_prefix", "PROV_"
-            buildConfigField "boolean", "isQrCodeSupported", "true"
+            resValue "string", "ble_device_name_prefix", "my_device"
+            buildConfigField "boolean", "isQrCodeSupported", "false"
             buildConfigField "boolean", "isSettingsAllowed", "true"
             buildConfigField "boolean", "isFilteringByPrefixAllowed", "true"
         }

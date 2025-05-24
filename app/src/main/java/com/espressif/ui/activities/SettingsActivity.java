@@ -89,7 +89,7 @@ public class SettingsActivity extends AppCompatActivity {
             userNamePrefWifi = prefMgr.findPreference(AppConstants.KEY_USER_NAME_WIFI);
             userNamePrefThread = prefMgr.findPreference(AppConstants.KEY_USER_NAME_THREAD);
 
-            boolean isSecure = sharedPreferences.getBoolean(AppConstants.KEY_SECURITY_TYPE, true);
+            boolean isSecure = sharedPreferences.getBoolean(AppConstants.KEY_SECURITY_TYPE, false);
             if (isSecure) {
                 securityPref.setSummary(R.string.summary_secured);
                 userNamePrefWifi.setVisible(true);
