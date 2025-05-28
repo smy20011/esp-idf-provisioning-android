@@ -42,6 +42,7 @@ import com.espressif.provisioning.ESPProvisionManager;
 import com.espressif.provisioning.WiFiAccessPoint;
 import com.espressif.provisioning.listeners.WiFiScanListener;
 import com.espressif.ui.adapters.WiFiListAdapter;
+import com.espressif.ui.utils.Xiaozhi;
 import com.espressif.wifi_provisioning.R;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -172,6 +173,7 @@ public class WiFiScanActivity extends AppCompatActivity {
                     public void run() {
                         wifiAPList.addAll(wifiList);
                         completeWifiList();
+                        new Xiaozhi(provisionManager).loadDeviceJson();
                     }
                 });
             }
