@@ -173,7 +173,7 @@ public class WiFiScanActivity extends AppCompatActivity {
                     public void run() {
                         wifiAPList.addAll(wifiList);
                         completeWifiList();
-                        new Xiaozhi(provisionManager).loadDeviceJson();
+                        // new Xiaozhi(provisionManager).loadDeviceJson();
                     }
                 });
             }
