@@ -54,7 +54,7 @@ public class ProvisionActivity extends AppCompatActivity {
 
     private String ssidValue, passphraseValue = "", dataset;
     private ESPProvisionManager provisionManager;
-    private Xiaozhi xiaozhi;
+    // private Xiaozhi xiaozhi;
     private boolean isProvisioningCompleted = false;
 
     @Override
@@ -68,7 +68,7 @@ public class ProvisionActivity extends AppCompatActivity {
         passphraseValue = intent.getStringExtra(AppConstants.KEY_WIFI_PASSWORD);
         dataset = intent.getStringExtra(AppConstants.KEY_THREAD_DATASET);
         provisionManager = ESPProvisionManager.getInstance(getApplicationContext());
-        xiaozhi = new Xiaozhi(provisionManager);
+        // xiaozhi = new Xiaozhi(provisionManager);
         initViews();
         EventBus.getDefault().register(this);
 
@@ -275,7 +275,7 @@ public class ProvisionActivity extends AppCompatActivity {
                         @Override
                         public void run() {
                             isProvisioningCompleted = true;
-                            xiaozhi.loadDeviceJson();
+                            // xiaozhi.loadDeviceJson();
                             tick3.setImageResource(R.drawable.ic_checkbox_on);
                             tick3.setVisibility(View.VISIBLE);
                             progress3.setVisibility(View.GONE);
